@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" method="upgrade" type="plugin" group="user">
+	<name>Custom User ID for Joomla</name>
+	<author>Martin Müller</author>
+	<copyright>Martin Müller, 2013</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<creationDate>May 22, 2013</creationDate>
+	<authorUrl>http://martin-mueller.info</authorUrl>
+	<version>0.1</version>
+	<description>
+		Apply a custom user id when a user is created.
+	</description>
+	<files>
+		<filename plugin="joomla_custom_userid">joomla_custom_userid.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="generationMethod" type="radio" default="0" label="User ID generation method" description="Set the method for user ID generation.">
+					<option value="0">Default (autoincrement)</option>
+					<option value="1">Random number (100-999999)</option>
+				</field>        
+			</fieldset>
+		</fields>
+	</config>
+	<params>
+		<param name="generationMethod" type="radio" default="0" label="User ID generation method" description="Set the method for user ID generation.">
+			<option value="0">Default (autoincrement)</option>
+			<option value="1">Random number (100-999999)</option>
+		</param>
+	</params>
+</install>
